@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
@@ -18,26 +17,36 @@
     <main>
         <section id="uvod">
             <h2>Jak dobře znáš pražské metro?</h2>
-
             <p>
-                Poznávej stanice podle fotografií a detailů.
-                Otestuj své znalosti a získej co nejvíce bodů!
+                Odpovídej na otázky o pražském metru
+                a získej co nejvíce bodů!
             </p>
 
-            <h3>Pravidla hry</h3>
-
             <ul>
-                <li>Čeká tě 10 otázek.</li>
-                <li>Každá otázka má 4 možnosti.</li>
+                <li>Každá otázka má čtyři možnosti.</li>
                 <li>Za správnou odpověď získáš 10 bodů.</li>
-                <li>Každá nápověda odečte 2 body.</li>
+                <li>Za chybnou odpověď získáš 0 bodů.</li>
             </ul>
 
             <button id="start" type="button">Spustit hru</button>
         </section>
 
         <section id="hra" hidden>
-            <!-- Sem později přidám otázky. -->
+            <p id="cislo-otazky"></p>
+            <h2 id="otazka"></h2>
+
+            <div id="odpovedi"></div>
+
+            <div id="vysledek" aria-live="polite"></div>
+
+            <button id="dalsi" type="button" hidden>
+                Další otázka
+            </button>
+        </section>
+
+        <section id="konec" hidden>
+            <h2>Konec hry!</h2>
+            <p id="skore"></p>
         </section>
     </main>
 
