@@ -17,15 +17,25 @@
     <main>
         <section id="uvod">
             <h2>Jak dobře znáš pražské metro?</h2>
+
             <p>
-                Odpovídej na otázky o pražském metru
-                a získej co nejvíce bodů!
+                Poznávej pražské stanice podle fotografií
+                a zjisti, kolik toho o metru víš.
             </p>
 
+            <h3>Pravidla hry</h3>
             <ul>
-                <li>Každá otázka má čtyři možnosti.</li>
-                <li>Za správnou odpověď získáš 10 bodů.</li>
-                <li>Za chybnou odpověď získáš 0 bodů.</li>
+                <li>Hra obsahuje 10 otázek.</li>
+                <li>Každá otázka má 4 možnosti.</li>
+                <li>Za správnou odpověď můžeš získat až 10 bodů.</li>
+                <li>Každé odhalení fotografie odečte 2 body.</li>
+            </ul>
+            <h3>Zdroje a podklady</h3>
+             <ul>
+                <li><a href="https://web.archive.org/web/20201010083121/http://metroart.cz/index.html" target="_blank">MetroArt</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/Um%C4%9Bleck%C3%A1_d%C3%ADla_ve_stanic%C3%ADch_pra%C5%BEsk%C3%A9ho_metra_%E2%80%93_linka_A" target="_blank">Umělecká díla ve stanicích pražského metra – linka A</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/Um%C4%9Bleck%C3%A1_d%C3%ADla_ve_stanic%C3%ADch_pra%C5%BEsk%C3%A9ho_metra_%E2%80%93_linka_B" target="_blank">Umělecká díla ve stanicích pražského metra – linka B</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/Um%C4%9Bleck%C3%A1_d%C3%ADla_ve_stanic%C3%ADch_pra%C5%BEsk%C3%A9ho_metra_%E2%80%93_linka_C" target="_blank">Umělecká díla ve stanicích pražského metra – linka C</a></li>
             </ul>
 
             <button id="start" type="button">Spustit hru</button>
@@ -35,9 +45,17 @@
             <p id="cislo-otazky"></p>
             <h2 id="otazka"></h2>
 
+            <div class="fotka">
+                <img id="obrazek" src="" alt="">
+            </div>
+
+            <button id="napoveda" type="button">
+                Odhalit více (-2 body)
+            </button>
+
             <div id="odpovedi"></div>
 
-            <div id="vysledek" aria-live="polite"></div>
+            <p id="vysledek" aria-live="polite"></p>
 
             <button id="dalsi" type="button" hidden>
                 Další otázka
@@ -47,12 +65,9 @@
         <section id="konec" hidden>
             <h2>Konec hry!</h2>
             <p id="skore"></p>
+            <button id="restart" type="button">Hrát znovu</button>
         </section>
     </main>
-
-    <footer>
-        <p>Školní projekt – MetroQuest</p>
-    </footer>
 
 </body>
 </html>
